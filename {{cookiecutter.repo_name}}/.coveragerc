@@ -1,5 +1,5 @@
 [run]
-source = {{cookiecutter.project_name}}
+source = {{cookiecutter.package_name}}
 
 [report]
 exclude_lines =

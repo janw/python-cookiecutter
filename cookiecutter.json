@@ -1,4 +1,28 @@
 {
-  "project_name": "Best Practices",
-  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
+    "project_name": "My Python Project",
+    "project_description": "Refreshingly simple static site generator.",
+    "full_name": "John Doe",
+    "email": "john.doe@example.com",
+    "license": "Apache-2.0",
+    "initial_project_version": "0.1.0",
+    "python_version": [
+        "3.7",
+        "3.6",
+        "3.5"
+    ],
+    "docker_image": "python:{{cookiecutter.python_version}}-alpine",
+    "repo_name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "package_name": "{{ cookiecutter.repo_name|replace('-', '_') }}",
+    "run_git_init": [
+        "yes",
+        "no"
+    ],
+    "run_poetry_install": [
+        "yes",
+        "no"
+    ],
+    "run_precommit_install": [
+        "yes",
+        "no"
+    ]
 }

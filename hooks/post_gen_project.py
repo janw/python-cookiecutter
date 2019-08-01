@@ -1,12 +1,9 @@
-import sys
+import subprocess
 
-python_version = str(sys.version_info.major) + '.' + str(sys.version_info.minor)
-
-
-with open('Pipfile') as f:
-    pipfile = f.read()
-    pipfile = pipfile.replace(r'{python_version}', python_version)
-
-
-with open('Pipfile', 'w') as f:
-    f.write(pipfile)
+if "{{cookiecutter.run_git_init}}" == "yes":
+    subprocess.run(["git", "init", "."])
+if "{{cookiecutter.run_poetry_install}}" == "yes":
+    subprocess.run(["poetry", "--no-interaction", "install"])
+if "{{cookiecutter.run_precommit_install}}" == "yes":
+    subprocess.run(["pre-commit", "install", "-t", "pre-commit"])
+    subprocess.run(["pre-commit", "install", "-t", "pre-push"])

@@ -1,9 +1,12 @@
 # {{cookiecutter.project_name}}
 
-## Setup
+{{cookiecutter.project_description}}
+
+## Development Setup
+
 ```sh
 # Install dependencies
-pipenv install --dev
+poetry install --dev
 
 # Setup pre-commit and pre-push hooks
 pipenv run pre-commit install -t pre-commit
@@ -11,4 +14,5 @@ pipenv run pre-commit install -t pre-push
 ```
 
 ## Credits
-This package was created with Cookiecutter and the [sourceryai/python-best-practices-cookiecutter](https://github.com/sourceryai/python-best-practices-cookiecutter) project template.
+
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [janw/python-cookiecutter](https://github.com/janw/python-cookiecutter) project template.

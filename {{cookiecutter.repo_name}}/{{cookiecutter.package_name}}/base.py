@@ -1,4 +1,4 @@
-def fib(n: int) -> int:
+def fib(n):
     if n < 2:
         return n
     else:
