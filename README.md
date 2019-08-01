@@ -5,7 +5,7 @@ Best practices [cookiecutter](https://github.com/audreyr/cookiecutter) template 
 - **Uses [Poetry](https://poetry.eustace.io/) instead of Pipenv**
 - Adds project metadata to cookiecutter config
 - Adds `Dockerfile`
-- Excludes development enviroment tools from dev-dependencies (more on that [below](#why-include-only-pytest-in-the-dev-dependencies)
+- Excludes development enviroment tools from dev-dependencies (more on that [below](#why-only-pytest-et-al-are-included-in-the-dev-dependencies))
 - Moves manual setup steps (git init, virtualenv/dependency setup, pre-commit hook install) to post-generate hook
 
 ## Features
